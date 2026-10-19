@@ -1,0 +1,172 @@
+:root {
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --bg-color: #f3f4f6;
+    --card-bg: #ffffff;
+    --text-main: #1f2937;
+    --border-color: #d1d5db;
+    --success: #059669;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    padding: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+h3 {
+    margin-top: 0;
+    color: #374151;
+    border-bottom: 2px solid #f3f4f6;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.nav-links {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f3f4f6;
+    font-size: 1em;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Układ siatki dla paneli */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+@media(max-width: 900px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.karta {
+    background: #f9fafb;
+    padding: 25px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+/* Formularze - układ pionowy, schludny */
+form label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 0.9em;
+    color: #374151;
+}
+
+form input, form select, form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 6px;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1em;
+    background: #ffffff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+form button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 15px;
+    transition: background 0.2s;
+}
+
+form button:hover {
+    background: var(--primary-hover);
+}
+
+/* Komunikaty */
+.blad {
+    color: #b91c1c;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.sukces {
+    color: #047857;
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* Tabele */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 12px 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #e0e7ff;
+    color: #312e81;
+    font-weight: 700;
+    font-size: 0.95em;
+}
